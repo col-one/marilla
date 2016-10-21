@@ -1,0 +1,51 @@
+marilla Package
+===============
+
+:mod:`defMenus` Module
+----------------------
+
+.. automodule:: marilla.defMenus
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+:mod:`guegueTags` Module
+------------------------
+
+.. automodule:: marilla.guegueTags
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+:mod:`maUtils` Module
+---------------------
+
+.. automodule:: marilla.maUtils
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+:mod:`marillaUi` Module
+-----------------------
+
+.. automodule:: marilla.marillaUi
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+:mod:`mopaMenu` Module
+----------------------
+
+.. automodule:: marilla.mopaMenu
+    :members:
+    :undoc-members:
+    :show-inheritance:
+
+Subpackages
+-----------
+
+.. toctree::
+
+    marilla.guerilla
+    marilla.utils
+

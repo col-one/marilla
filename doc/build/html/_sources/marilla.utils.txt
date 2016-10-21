@@ -1,0 +1,11 @@
+utils Package
+=============
+
+:mod:`sockette` Module
+----------------------
+
+.. automodule:: marilla.utils.sockette
+    :members:
+    :undoc-members:
+    :show-inheritance:
+

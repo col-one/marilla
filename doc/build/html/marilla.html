@@ -1,0 +1,298 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>marilla Package &mdash; marilla 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="marilla 1.0 documentation" href="index.html" />
+    <link rel="next" title="guerilla Package" href="marilla.guerilla.html" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="marilla.guerilla.html" title="guerilla Package"
+             accesskey="N">next</a> |</li>
+        <li><a href="#">marilla 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="marilla-package">
+<h1>marilla Package<a class="headerlink" href="#marilla-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-marilla.defMenus">
+<span id="defmenus-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">defMenus</span></tt> Module<a class="headerlink" href="#module-marilla.defMenus" title="Permalink to this headline">¶</a></h2>
+<p>Ensembles des def lance depuis le menu mopa&gt;guerilla
+Peuvent etre utilise hors menu.</p>
+<dl class="function">
+<dt id="marilla.defMenus.add_custom_tags">
+<tt class="descclassname">marilla.defMenus.</tt><tt class="descname">add_custom_tags</tt><big>(</big><em>*args</em><big>)</big><a class="headerlink" href="#marilla.defMenus.add_custom_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>add and remove custom tags on selection with GUI</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="marilla.defMenus.api_help">
+<tt class="descclassname">marilla.defMenus.</tt><tt class="descname">api_help</tt><big>(</big><em>*args</em><big>)</big><a class="headerlink" href="#marilla.defMenus.api_help" title="Permalink to this definition">¶</a></dt>
+<dd><p>open firefox for display marilla&#8217;s api help</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="marilla.defMenus.auto_tags_selection">
+<tt class="descclassname">marilla.defMenus.</tt><tt class="descname">auto_tags_selection</tt><big>(</big><em>*args</em><big>)</big><a class="headerlink" href="#marilla.defMenus.auto_tags_selection" title="Permalink to this definition">¶</a></dt>
+<dd><p>auto tag all selected objects</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="marilla.defMenus.create_geurilla_submenu">
+<tt class="descclassname">marilla.defMenus.</tt><tt class="descname">create_geurilla_submenu</tt><big>(</big><em>menu</em><big>)</big><a class="headerlink" href="#marilla.defMenus.create_geurilla_submenu" title="Permalink to this definition">¶</a></dt>
+<dd><p>create all submenu guerilla</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="marilla.defMenus.export_selection">
+<tt class="descclassname">marilla.defMenus.</tt><tt class="descname">export_selection</tt><big>(</big><em>*args</em><big>)</big><a class="headerlink" href="#marilla.defMenus.export_selection" title="Permalink to this definition">¶</a></dt>
+<dd><p>collect all export options for abc and send to guerilla with GUI</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="marilla.defMenus.remove_all_tags">
+<tt class="descclassname">marilla.defMenus.</tt><tt class="descname">remove_all_tags</tt><big>(</big><em>*args</em><big>)</big><a class="headerlink" href="#marilla.defMenus.remove_all_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>remove all tags selected objects</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-marilla.guegueTags">
+<span id="gueguetags-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">guegueTags</span></tt> Module<a class="headerlink" href="#module-marilla.guegueTags" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="marilla.guegueTags.GuegueTags">
+<em class="property">class </em><tt class="descclassname">marilla.guegueTags.</tt><tt class="descname">GuegueTags</tt><big>(</big><em>obj</em><big>)</big><a class="headerlink" href="#marilla.guegueTags.GuegueTags" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
+<p>wrapper de tags pour guerilla
+wrapper qui genere les tags de base: transform name, top parent name. et 
+possede une serie de methodes permettant d&#8217;ajouter ou supprimer des 
+tags guerilla.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>obj</strong> (<em>transform</em>) &#8211; object de type transform ou camera ou mesh</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="marilla.guegueTags.GuegueTags.VALIDE_OBJ">
+<tt class="descname">VALIDE_OBJ</tt><em class="property"> = ['camera', 'mesh']</em><a class="headerlink" href="#marilla.guegueTags.GuegueTags.VALIDE_OBJ" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="marilla.guegueTags.GuegueTags.add_to_tags">
+<tt class="descname">add_to_tags</tt><big>(</big><em>tag=None</em><big>)</big><a class="headerlink" href="#marilla.guegueTags.GuegueTags.add_to_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>add extra tag to tags list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tag</strong> (<em>string</em>) &#8211; extra tag to add must be str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="marilla.guegueTags.GuegueTags.remove_to_tags">
+<tt class="descname">remove_to_tags</tt><big>(</big><em>tag=None</em><big>)</big><a class="headerlink" href="#marilla.guegueTags.GuegueTags.remove_to_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>remove extra tag to tags list</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>tag</strong> (<em>string</em>) &#8211; tag name to remove</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="marilla.guegueTags.GuegueTags.write_tags">
+<tt class="descname">write_tags</tt><big>(</big><big>)</big><a class="headerlink" href="#marilla.guegueTags.GuegueTags.write_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>write tags in extr attributes object</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-marilla.maUtils">
+<span id="mautils-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">maUtils</span></tt> Module<a class="headerlink" href="#module-marilla.maUtils" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="marilla.maUtils.abc_export">
+<tt class="descclassname">marilla.maUtils.</tt><tt class="descname">abc_export</tt><big>(</big><em>framemode='currentframe'</em>, <em>qstart=0</em>, <em>qend=0</em>, <em>preroll=False</em>, <em>path=''</em>, <em>preframe=0</em>, <em>nodes=</em><span class="optional">[</span><span class="optional">]</span><big>)</big><a class="headerlink" href="#marilla.maUtils.abc_export" title="Permalink to this definition">¶</a></dt>
+<dd><p>wrapper the abcexport export abc file with abcexport maya command with
+some preset like uvwrite, world space, color groups, face groups</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>framemode</strong> (<em>string</em>) &#8211; currentframe, timeslider, startend</li>
+<li><strong>qstart</strong> (<em>int</em>) &#8211; precise start frame manualy for startend framemode option</li>
+<li><strong>qend</strong> (<em>int</em>) &#8211; precise end frame manualy for startend framemode option</li>
+<li><strong>preroll</strong> (<em>bool</em>) &#8211; active a preroll compute frames</li>
+<li><strong>preframe</strong> (<em>int</em>) &#8211; precise the preroll start frame</li>
+<li><strong>nodes</strong> (<em>list</em>) &#8211; list of maya transform nodes</li>
+<li><strong>path</strong> (<em>string</em>) &#8211; the alembic path file</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-marilla.marillaUi">
+<span id="marillaui-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">marillaUi</span></tt> Module<a class="headerlink" href="#module-marilla.marillaUi" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="marilla.marillaUi.ui_add_custom_tags">
+<tt class="descclassname">marilla.marillaUi.</tt><tt class="descname">ui_add_custom_tags</tt><big>(</big><em>exec_add_button</em>, <em>exec_remove_button</em><big>)</big><a class="headerlink" href="#marilla.marillaUi.ui_add_custom_tags" title="Permalink to this definition">¶</a></dt>
+<dd><p>create ui window for add and remove guerilla tags</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="marilla.marillaUi.ui_export_selection">
+<tt class="descclassname">marilla.marillaUi.</tt><tt class="descname">ui_export_selection</tt><big>(</big><em>exec_button</em><big>)</big><a class="headerlink" href="#marilla.marillaUi.ui_export_selection" title="Permalink to this definition">¶</a></dt>
+<dd><p>create ui window for export to abc and guerilla</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-marilla.mopaMenu">
+<span id="mopamenu-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">mopaMenu</span></tt> Module<a class="headerlink" href="#module-marilla.mopaMenu" title="Permalink to this headline">¶</a></h2>
+<p>Create a mopa menu, if it already exists it is delete and recreate 
+from scratch.</p>
+<dl class="function">
+<dt id="marilla.mopaMenu.create_mopa">
+<tt class="descclassname">marilla.mopaMenu.</tt><tt class="descname">create_mopa</tt><big>(</big><big>)</big><a class="headerlink" href="#marilla.mopaMenu.create_mopa" title="Permalink to this definition">¶</a></dt>
+<dd><p>create menu mopa, delete it if already exists</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="marilla.mopaMenu.get_main_window_name">
+<tt class="descclassname">marilla.mopaMenu.</tt><tt class="descname">get_main_window_name</tt><big>(</big><big>)</big><a class="headerlink" href="#marilla.mopaMenu.get_main_window_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>return the main maya window</p>
+</dd></dl>
+
+</div>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="marilla.guerilla.html">guerilla Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="marilla.guerilla.html#module-marilla.guerilla.guerillaPort"><tt class="docutils literal"><span class="pre">guerillaPort</span></tt> Module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="marilla.utils.html">utils Package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="marilla.utils.html#module-marilla.utils.sockette"><tt class="docutils literal"><span class="pre">sockette</span></tt> Module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">marilla Package</a><ul>
+<li><a class="reference internal" href="#module-marilla.defMenus"><tt class="docutils literal"><span class="pre">defMenus</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-marilla.guegueTags"><tt class="docutils literal"><span class="pre">guegueTags</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-marilla.maUtils"><tt class="docutils literal"><span class="pre">maUtils</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-marilla.marillaUi"><tt class="docutils literal"><span class="pre">marillaUi</span></tt> Module</a></li>
+<li><a class="reference internal" href="#module-marilla.mopaMenu"><tt class="docutils literal"><span class="pre">mopaMenu</span></tt> Module</a></li>
+<li><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="marilla.guerilla.html"
+                        title="next chapter">guerilla Package</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="_sources/marilla.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="marilla.guerilla.html" title="guerilla Package"
+             >next</a> |</li>
+        <li><a href="#">marilla 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2016, colinl.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.1.3.
+    </div>
+  </body>
+</html>
