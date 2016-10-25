@@ -17,7 +17,7 @@ class GuegueTags(object):
 
     VALIDE_OBJ = ['camera', 'mesh']
 
-    def __init__(self, obj, grp=-1):
+    def __init__(self, obj, grp=0):
         """
         """
         self.obj = obj
@@ -33,7 +33,7 @@ class GuegueTags(object):
             self.tags = [self.obj.name()]
         else:
             self.tags = [self.obj.name(), self.group.name()]
-        if self.grp != -1:
+        if self.grp != 0:
             self.tags += [n.name() for n in self._get_all_group()]
         self._add_exist_tags()
 
@@ -82,7 +82,7 @@ class GuegueTags(object):
     def _get_all_group(self):
         node = pmc.ls(self.obj)[0]
         parents = node.getAllParents()
-        if self.grp == 0:
+        if self.grp <= -1:
             return parents
         parents = parents[0:self.grp]
         return parents
