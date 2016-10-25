@@ -97,17 +97,19 @@ Peuvent etre utilise hors menu.</p>
 <span id="gueguetags-module"></span><h2><tt class="xref py py-mod docutils literal"><span class="pre">guegueTags</span></tt> Module<a class="headerlink" href="#module-marilla.guegueTags" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="marilla.guegueTags.GuegueTags">
-<em class="property">class </em><tt class="descclassname">marilla.guegueTags.</tt><tt class="descname">GuegueTags</tt><big>(</big><em>obj</em><big>)</big><a class="headerlink" href="#marilla.guegueTags.GuegueTags" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><tt class="descclassname">marilla.guegueTags.</tt><tt class="descname">GuegueTags</tt><big>(</big><em>obj</em>, <em>grp=-1</em><big>)</big><a class="headerlink" href="#marilla.guegueTags.GuegueTags" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <tt class="xref py py-class docutils literal"><span class="pre">object</span></tt></p>
-<p>wrapper de tags pour guerilla
-wrapper qui genere les tags de base: transform name, top parent name. et 
-possede une serie de methodes permettant d&#8217;ajouter ou supprimer des 
-tags guerilla.</p>
+<p>wrapper de tags pour guerilla wrapper qui genere les tags de base: transform name, top parent name.
+et possede une serie de methodes permettant d&#8217;ajouter ou supprimer des tags guerilla.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>obj</strong> (<em>transform</em>) &#8211; object de type transform ou camera ou mesh</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>obj</strong> (<em>transform</em>) &#8211; object de type transform ou camera ou mesh</li>
+<li><strong>grp</strong> (<em>int</em>) &#8211; level of depth parents to tags</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
