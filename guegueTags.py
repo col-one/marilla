@@ -3,21 +3,25 @@ try:
 except ImportError:
     pass
 
+
 class GuegueTags(object):
-    """wrapper de tags pour guerilla
-        wrapper qui genere les tags de base: transform name, top parent name. et 
-        possede une serie de methodes permettant d'ajouter ou supprimer des 
-        tags guerilla.
+    """wrapper de tags pour guerilla wrapper qui genere les tags de base: transform name, top parent name.
+        et possede une serie de methodes permettant d'ajouter ou supprimer des tags guerilla.
 
         :type obj: transform
-        :param obj: object de type transform ou camera ou mesh 
+        :param obj: object de type transform ou camera ou mesh
+        :type grp: int
+        :param grp: level of depth parents to tags
+
     """
 
     VALIDE_OBJ = ['camera', 'mesh']
-    def __init__(self, obj):
-        """ 
+
+    def __init__(self, obj, grp=-1):
+        """
         """
         self.obj = obj
+        self.grp = grp
         self.group = None
         self.tags = []
         is_valide = self._validity()
@@ -29,8 +33,10 @@ class GuegueTags(object):
             self.tags = [self.obj.name()]
         else:
             self.tags = [self.obj.name(), self.group.name()]
+        if self.grp != -1:
+            self.tags += [n.name() for n in self._get_all_group()]
         self._add_exist_tags()
-        
+
     def _validity(self):
         """check si shape ou transform de shape ou transform de cam
         """
@@ -45,14 +51,14 @@ class GuegueTags(object):
                 return False
             else:
                 self.obj = child.getTransform()
-                #TODO::remove this pymel fix bug
+                # TODO::remove this pymel fix bug
                 if self.obj == None:
-                    self.obj = pmc.listRelatives(child, type='transform',p=True)[0]
+                    self.obj = pmc.listRelatives(child, type='transform', p=True)[0]
             return True
         if self.obj.type() in GuegueTags.VALIDE_OBJ:
             self.obj = self.obj.getTransform()
             return True
-            
+
     def _add_exist_tags(self):
         """add all existing guerilla tags to tags list attribute
         """
@@ -64,7 +70,7 @@ class GuegueTags(object):
         except pmc.MayaAttributeError:
             print "Warning: no guerilla tags present"
         self.tags = filter(None, self.tags)
-            
+
     def _get_top(self):
         """find his topp root group
         """
@@ -72,22 +78,32 @@ class GuegueTags(object):
             self.group = None
         else:
             self.group = self.obj.root()
-            
+
+    def _get_all_group(self):
+        node = pmc.ls(self.obj)[0]
+        parents = node.getAllParents()
+        if self.grp == 0:
+            return parents
+        parents = parents[0:self.grp]
+        return parents
+
     def add_to_tags(self, tag=None):
         """add extra tag to tags list
 
             :param tag: extra tag to add must be str
             :type tag: string
+
         """
         if type(tag) is not str or tag == '':
             raise TypeError("Wrong extra tag type, must be string")
         self.tags.append(tag)
-        
+
     def remove_to_tags(self, tag=None):
         """remove extra tag to tags list
 
             :type tag: string
             :param tag: tag name to remove
+
         """
         if type(tag) is not str or tag == '':
             raise TypeError("Wrong tag type to remove, must be string")
@@ -97,7 +113,7 @@ class GuegueTags(object):
                 self.tags.remove(tag)
             except ValueError:
                 raise ValueError("{0} is not in object tags".format(tag))
-            
+
     def write_tags(self):
         """write tags in extr attributes object
         """
