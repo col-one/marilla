@@ -65,10 +65,11 @@ def export_selection(*args):
         qstart = pmc.intField('start', q=True, value=True)
         qend = pmc.intField('end', q=True, value=True)
         preframe = pmc.intField('prerollstart', q=True, value=True)
+        step = pmc.intField('step', q=True, value=True)
         toguerilla = pmc.checkBox('guerilla', q=True, value=True)
         #export with maUtils abc_export
         marilla.maUtils.abc_export(path=path,framemode=framemode,preroll=preroll,
-        qstart=qstart, qend=qend, preframe=preframe, nodes=pmc.ls(sl=True))
+        qstart=qstart, qend=qend, preframe=preframe, step=step, nodes=pmc.ls(sl=True))
         #send to guerilla
         if toguerilla:
             command=("local mod = Document:modify(); mod.createref ('{filename}'"
