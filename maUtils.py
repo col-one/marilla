@@ -4,7 +4,7 @@ except ImportError:
     pass
 
 def abc_export(framemode='currentframe', qstart=0, qend=0, preroll=False,
-                path='', preframe=0, nodes=[]):
+                path='', preframe=0, step=1.0 nodes=[]):
     """wrapper the abcexport export abc file with abcexport maya command with
      some preset like uvwrite, world space, color groups, face groups
 
@@ -47,9 +47,9 @@ def abc_export(framemode='currentframe', qstart=0, qend=0, preroll=False,
     for obj in nodes:
         objects += ' -root |' + obj.name()
     abcstring = ('{prerollstring} -frameRange {start} {end} -attr GuerillaTags'
-    ' -uvWrite -writeColorSets -writeFaceSets -worldSpace -dataFormat ogawa'
+    ' -uvWrite -writeColorSets -writeFaceSets -worldSpace -step {step} -dataFormat ogawa'
     ' {objects} -file {path}').format(
                     prerollstring=prerollstring, start=start, end=end, 
-                    objects=objects, path=path)
+                    objects=objects, path=path, step=step)
     pmc.AbcExport(jobArg=abcstring, verbose=True)
     
