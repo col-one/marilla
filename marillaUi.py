@@ -40,7 +40,7 @@ def ui_export_selection(exec_button):
     pmc.checkBox('preroll', label='Pre roll')
     pmc.intField('prerollstart')
     pmc.text(label='Step')
-    pmc.intField('step')
+    pmc.floatField('step', value=1.0)
     pmc.separator()
     pmc.checkBox('guerilla', label='Send to Guerilla')
     pmc.separator()
